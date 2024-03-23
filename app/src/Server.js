@@ -84,9 +84,9 @@ const app = express();
 app.get('/sumit', (req, res) => {
     res.send("Welcome to OCMS Backend for Software Engineering Project ");
 })
-app.listen(3010,()=>{
-    console.log('Server is running on port 3010');
-})
+// app.listen(3010,()=>{
+//     console.log('Server is running on port 3010');
+// })
 
 const options = {
     cert: fs.readFileSync(path.join(__dirname, config.server.ssl.cert), 'utf-8'),
