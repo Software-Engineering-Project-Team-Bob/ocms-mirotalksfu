@@ -4,7 +4,6 @@ const os = require('os');
 
 // https://api.ipify.org
 
-
 function getIPv4() {
     const ifaces = os.networkInterfaces();
     for (const interfaceName in ifaces) {
@@ -399,15 +398,16 @@ module.exports = {
         webRtcServerActive: false,
         webRtcServerOptions: {
             listenInfos: [
-                { protocol: 'udp', ip: '0.0.0.0', announcedAddress: IPv4, port: 44444 },
-                { protocol: 'tcp', ip: '0.0.0.0', announcedAddress: IPv4, port: 44444 },
+                { protocol: "udp", ip: "0.0.0.0", announcedAddress: "Server Public IPv4" },
+                { protocol: "tcp", ip: "0.0.0.0", announcedAddress: "Server Public IPv4" },
             ],
         },
         // WebRtcTransportOptions
+        
         webRtcTransport: {
             listenInfos: [
-                { protocol: 'udp', ip: '0.0.0.0', announcedAddress: IPv4 },
-                { protocol: 'tcp', ip: '0.0.0.0', announcedAddress: IPv4 },
+                { protocol: "udp", ip: "Server Public IPv4" },
+                { protocol: "tcp", ip: "Server Public IPv4" },
             ],
             initialAvailableOutgoingBitrate: 1000000,
             minimumAvailableOutgoingBitrate: 600000,
